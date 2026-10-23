@@ -143,14 +143,44 @@
     <span data-lang="en">Skip to main content</span>
   </a>
 
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Jewelon Bio">
+      <!-- Bilingual Brand: Jewelon Bio ｜ 咨爾龍生技 -->
+      <a class="brand" href="#top" aria-label="Jewelon Bio 咨爾龍生技">
         <img src="assets/logo-gold.svg" alt="Jewelon Logo" width="38" height="44">
-        <span class="brand-name">Jewelon <span>Bio.</span></span>
+        <div class="brand-title-group">
+          <span class="brand-en">Jewelon <span>Bio</span></span>
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-zh">咨爾龍生技</span>
+        </div>
       </a>
 
-      <nav class="nav" id="site-nav" aria-label="主選單">
+      <!-- Header Actions: Lang Switch + Sample CTA + Veggie Burger -->
+      <div class="header-actions">
+        <!-- Bilingual Switch -->
+        <div class="lang-switch" role="group" aria-label="語言切換 Language Selector">
+          <button type="button" class="lang-btn active" data-switch-lang="zh" aria-label="切換為繁體中文">中</button>
+          <span class="lang-divider">/</span>
+          <button type="button" class="lang-btn" data-switch-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+
+        <a class="btn btn--gold btn--sm header-cta" href="#contact">
+          <span data-lang="zh">索取樣品</span>
+          <span data-lang="en">Request Sample</span>
+        </a>
+
+        <!-- Veggie Burger Button (=) -->
+        <button class="menu-toggle veggie-burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="開啟選單" title="開啟選單">
+          <span class="bar bar-top"></span>
+          <span class="bar bar-bottom"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Horizontal Multi-Line Wrapping Navigation Menu Strip -->
+    <nav class="nav nav-drawer-horizontal" id="site-nav" aria-label="主選單">
+      <div class="drawer-nav-track">
         <a href="#advantages">
           <span data-lang="zh">核心優勢</span>
           <span data-lang="en">Advantages</span>
@@ -175,31 +205,8 @@
           <span data-lang="zh">聯絡我們</span>
           <span data-lang="en">Contact</span>
         </a>
-        <div class="nav-mobile-cta">
-          <a class="btn btn--gold" href="#contact">
-            <span data-lang="zh">索取樣品</span>
-            <span data-lang="en">Request Sample</span>
-          </a>
-        </div>
-      </nav>
-
-      <div class="header-actions">
-        <!-- Bilingual Switch -->
-        <div class="lang-switch" role="group" aria-label="語言切換 Language Selector">
-          <button type="button" class="lang-btn active" data-switch-lang="zh" aria-label="切換為繁體中文">中</button>
-          <span class="lang-divider">/</span>
-          <button type="button" class="lang-btn" data-switch-lang="en" aria-label="Switch to English">EN</button>
-        </div>
-
-        <a class="btn btn--gold btn--sm" href="#contact">
-          <span data-lang="zh">索取樣品</span>
-          <span data-lang="en">Request Sample</span>
-        </a>
-        <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="開啟選單">
-          <span></span>
-        </button>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main id="main">
@@ -469,7 +476,7 @@
           <p class="lead mt-2">
             <span data-lang="zh">以下為 Jewelon 牛奶外泌體原料的關鍵特性數據；COA、MSDS 等技術文件可依客戶需求提供。</span>
             <span data-lang="en">Key characterization data for Jewelon Milk Exosomes. COA, MSDS and other technical
-              documents are available on request.</span>
+            documents are available on request.</span>
           </p>
 
           <div class="spec-table mt-3">
@@ -1158,9 +1165,14 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="#top">
-            <img src="assets/logo-gold.svg" alt="" width="38" height="44">
-            <span class="brand-name">Jewelon <span>Bio.</span></span>
+          <!-- Bilingual Brand in Footer -->
+          <a class="brand" href="#top" aria-label="Jewelon Bio 咨爾龍生技">
+            <img src="assets/logo-gold.svg" alt="Jewelon Logo" width="38" height="44">
+            <div class="brand-title-group">
+              <span class="brand-en">Jewelon <span>Bio</span></span>
+              <span class="brand-divider" aria-hidden="true"></span>
+              <span class="brand-zh">咨爾龍生技</span>
+            </div>
           </a>
           <p>
             <span data-lang="zh">Jewelon Bio 咨爾龍生技 — 精準煥活，從細胞開始。<br>高純度牛奶外泌體原料 × 外泌體 CDMO 與 QC 檢測服務。</span>

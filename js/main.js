@@ -15,24 +15,33 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* Mobile menu */
+  /* Menu Toggle & Navigation Drawer */
   const toggle = document.querySelector('.menu-toggle');
   if (toggle) {
     toggle.addEventListener('click', () => {
       const open = body.classList.toggle('menu-open');
       toggle.setAttribute('aria-expanded', String(open));
     });
-    document.querySelectorAll('.nav a').forEach((a) =>
+
+    document.querySelectorAll('.nav a, .drawer-nav-track a').forEach((a) =>
       a.addEventListener('click', () => {
         body.classList.remove('menu-open');
         toggle.setAttribute('aria-expanded', 'false');
       })
     );
+
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && body.classList.contains('menu-open')) {
         body.classList.remove('menu-open');
         toggle.setAttribute('aria-expanded', 'false');
         toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (body.classList.contains('menu-open') && header && !header.contains(e.target)) {
+        body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
